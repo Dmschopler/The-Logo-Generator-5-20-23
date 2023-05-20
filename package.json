@@ -1,7 +1,7 @@
 {
   "name": "svg-logo-maker",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application helps the user create a small Logo",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -14,5 +14,9 @@
   },
   "devDependencies": {
     "jest": "^29.5.0"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
   }
 }
