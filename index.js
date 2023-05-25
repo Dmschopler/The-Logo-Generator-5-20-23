@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const { Triangle, Circle, Square, } = require('./lib/shapes');
-const Logo = require("./lib/logo");
+const Logo = require('./lib/logo');
 const fs = require('fs');
 
 
@@ -20,20 +20,21 @@ inquirer
     {
       type: 'input',
       message: 'Please pick a color for the text',
-      name: 'textColor',
+      name: 'textColor'
     },
     {
       type: 'list',
       message: "Please pick one of the following shapes",
       name: 'shapes',
-      choices: ["Triangle", "Circle", "Square"],
+      choices: ["Triangle", "Circle", "Square"]
     },
     {
       type: 'input',
       messsage: 'Please pick a color for the shape',
-      name: 'shapeColor',
-    },
+      name: 'shapeColor'
+    }
   ])
+
   .then((answers) => {
     const { writtenText, textColor, shapes, shapeColor } = answers;
     const logo = new Logo();
@@ -50,10 +51,13 @@ inquirer
     }
 
     pickedShape.setColor(shapeColor);
-    logo.setShapes(shapes);
+    logo.setShapes(pickedShape);
     logo.setText(writtenText, textColor);
+    
 
     const madeLogo = logo.render();
 
-    fs.writeFile()
+    return fs.writeFile("./examples/logo.svg", madeLogo, (err) => err && console.error(err));
   })
+  .then(() => console.log("Congratulations! Your new Logo has been created!"))
+  .catch((err) => console.log(err.message));
