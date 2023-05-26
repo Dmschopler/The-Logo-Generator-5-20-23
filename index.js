@@ -30,7 +30,7 @@ inquirer
     },
     {
       type: 'input',
-      messsage: 'Please pick a color for the shape',
+      message: 'Please pick a color for the shape',
       name: 'shapeColor'
     }
   ])
