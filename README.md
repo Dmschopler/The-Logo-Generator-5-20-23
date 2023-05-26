@@ -14,4 +14,4 @@ This application helps the user create a small Logo after the answer a few quest
 
 Below is a video that demonstrates how to use the Logo Generator and an example of what type of logo it will create.
 
-
+[Demo Video](assets/Logo-Generator-Example.webm)
